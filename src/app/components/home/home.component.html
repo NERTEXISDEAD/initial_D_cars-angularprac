@@ -1,0 +1,15 @@
+<app-search></app-search>
+<app-not-found [visible]="!cars || cars.length <= 0" resetLinkText="Reset Search"></app-not-found>
+<ul>
+  <li *ngFor="let car of cars">
+    <a routerLink="/car/{{car.id}}">
+      <img src="{{car.imageUrl}}" alt="">
+      <div class="content">
+        {{car.name}}
+      </div>
+      <div class="content">
+        {{car.year}}
+      </div>
+    </a>
+  </li>
+</ul>

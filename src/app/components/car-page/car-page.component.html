@@ -1,0 +1,35 @@
+<app-not-found [visible]="!car" notFoundMessage="Car Not Found!" resetLinkText="Back To Homepage"></app-not-found>
+
+<div *ngIf="car" class="container">
+  <img [src]="car.imageUrl" [alt]="car.name">
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        Car: {{car.name}}
+      </span>
+    </div>
+    <div class="year">
+      <span>
+        Year: {{car.year}}
+      </span>
+    </div>
+    <div class="plate">
+      <span>
+        Plate: {{car.plate}}
+      </span>
+    </div>
+    <div class="color">
+      <span>
+        Color: {{car.color}}
+      </span>
+    </div>
+    <div class="custom_parts">
+      <span>
+        Custom Parts: {{car.custom_parts}}
+      </span>
+    </div>
+    <div>
+      <a routerLink="{{resetLinkRoute}}">{{resetLinkText}}</a>
+    </div>
+  </div>
+</div>
